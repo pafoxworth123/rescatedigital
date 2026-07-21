@@ -169,7 +169,7 @@
             color: #25D366;
         }
 
-        /* ===== HERO ===== */
+        /* ===== HERO WITH WOOD BACKGROUND ===== */
         .hero {
             position: relative;
             min-height: 100vh;
@@ -183,7 +183,7 @@
         .hero-bg {
             position: absolute;
             inset: 0;
-            background-image: url('images/hero_bg_faded1.jpg.png');
+            background-image: url('images/wood_banner-bg.jpg');
             background-size: cover;
             background-position: center;
             transform: scale(1.05);
@@ -415,11 +415,28 @@
             color: #0a3d6b;
         }
 
-        /* ===== STEPS SECTION ===== */
+        /* ===== STEPS SECTION WITH WOOD BACKGROUND ===== */
         .steps-section {
-            padding: 80px 0;
-            background: #0a1a2e;
+            padding: 100px 0;
+            background: url('images/faded_wood_bg1.jpg') center/cover no-repeat fixed;
             color: white;
+            position: relative;
+        }
+        .steps-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 26, 46, 0.7);
+        }
+        .steps-section .container {
+            position: relative;
+            z-index: 2;
+        }
+        .steps-section .section-title {
+            color: white;
+        }
+        .steps-section .section-sub {
+            color: rgba(255,255,255,0.8);
         }
         .steps-grid {
             display: grid;
@@ -429,15 +446,15 @@
         }
         .step-card {
             text-align: center;
-            background: rgba(255,255,255,0.06);
+            background: rgba(255,255,255,0.08);
             padding: 32px 24px;
             border-radius: 16px;
             backdrop-filter: blur(4px);
-            border: 1px solid rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
             transition: all 0.3s;
         }
         .step-card:hover {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.15);
             transform: translateY(-4px);
         }
         .step-number {
@@ -800,6 +817,59 @@
             padding: 12px 4px 4px;
         }
 
+        /* ===== FINAL CTA WITH WOOD BACKGROUND ===== */
+        .final-cta {
+            padding: 100px 0;
+            background: url('images/faded_wood_bg2.jpg') center/cover no-repeat fixed;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 26, 46, 0.75);
+        }
+        .final-cta .container {
+            position: relative;
+            z-index: 2;
+        }
+        .final-cta h2 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+        .final-cta p {
+            font-size: 1.15rem;
+            opacity: 0.85;
+            max-width: 550px;
+            margin: 0 auto 28px;
+        }
+        .final-cta .btn-primary {
+            background: #f5a623;
+            color: #0a1a2e;
+        }
+        .final-cta .btn-primary:hover {
+            background: #e6951a;
+        }
+        .final-cta .btn-whatsapp {
+            background: #25D366;
+            color: white;
+        }
+        .final-cta .btn-whatsapp:hover {
+            background: #1da851;
+        }
+        .final-cta .phone-link {
+            margin-top: 16px;
+            font-size: 0.95rem;
+            opacity: 0.6;
+        }
+        .final-cta .phone-link a {
+            color: white;
+            text-decoration: none;
+        }
+
         /* ===== FOOTER ===== */
         footer {
             background: #0a1a2e;
@@ -905,6 +975,12 @@
             }
             .gallery-grid {
                 grid-template-columns: 1fr 1fr;
+            }
+            .steps-section {
+                background-attachment: scroll;
+            }
+            .final-cta {
+                background-attachment: scroll;
             }
         }
         @media (max-width: 480px) {
@@ -1015,4 +1091,510 @@
 </section>
 
 <!-- ===== RISK SECTION ===== -->
-<section class="risk-section" id="servicios
+<section class="risk-section" id="servicios">
+    <div class="container">
+        <h2 class="section-title">¿Tus recuerdos están en riesgo?</h2>
+        <p class="section-sub">Las cintas magnéticas y fotografías antiguas se deterioran cada año. No esperes hasta que sea demasiado tarde.</p>
+        <div class="risk-grid">
+            <div class="risk-item">
+                <div class="icon">📉</div>
+                <h4>Pérdida de calidad</h4>
+                <p>Los VHS pierden nitidez y color con el tiempo. El óxido magnético se degrada.</p>
+            </div>
+            <div class="risk-item">
+                <div class="icon">🌡️</div>
+                <h4>Daño ambiental</h4>
+                <p>El calor, la humedad y el moho destruyen fotografías, negativos y cintas.</p>
+            </div>
+            <div class="risk-item">
+                <div class="icon">📺</div>
+                <h4>Reproductores obsoletos</h4>
+                <p>Cada vez es más difícil encontrar equipos que reproduzcan VHS, Super 8 o cassette.</p>
+            </div>
+            <div class="risk-item">
+                <div class="icon">🔥</div>
+                <h4>Pérdida total</h4>
+                <p>Un incendio, inundación o accidente puede destruir recuerdos irremplazables para siempre.</p>
+            </div>
+        </div>
+        <p class="text-center mt-20" style="font-weight:600;color:#0a3d6b;">⏳ <strong>Preserva hoy los momentos más importantes de tu familia.</strong></p>
+    </div>
+</section>
+
+<!-- ===== MEDIA SECTION ===== -->
+<section class="media-section">
+    <div class="container">
+        <h2 class="section-title">¿Qué podemos digitalizar?</h2>
+        <p class="section-sub">Aceptamos una amplia variedad de formatos antiguos.</p>
+        <div class="media-grid">
+            <div class="media-card">
+                <div class="emoji">📹</div>
+                <h4>Video</h4>
+                <small>VHS, VHS-C, MiniDV, Hi8, Betamax</small>
+            </div>
+            <div class="media-card">
+                <div class="emoji">🎬</div>
+                <h4>Películas</h4>
+                <small>8mm, Super 8, 16mm</small>
+            </div>
+            <div class="media-card">
+                <div class="emoji">🖼️</div>
+                <h4>Fotografías</h4>
+                <small>Impresas, negativos, diapositivas</small>
+            </div>
+            <div class="media-card">
+                <div class="emoji">🎵</div>
+                <h4>Audio</h4>
+                <small>Cassettes, microcassette, reel-to-reel</small>
+            </div>
+        </div>
+        <p class="text-center mt-20" style="color:#888;font-size:0.9rem;">¿No ves tu formato? <a href="#cotizar" style="color:#e87a2a;">Contáctanos</a> y te ayudamos.</p>
+    </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section class="gallery-section">
+    <div class="container">
+        <h2 class="section-title">Historias que hemos preservado</h2>
+        <p class="section-sub">Cada imagen cuenta una historia que merece ser recordada.</p>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/60s_family_reel_film.jpg" alt="Familia de los 60s viendo película en Super 8" loading="lazy">
+                <div class="caption"><strong>🎞️ Década de 1960</strong> — Familia disfrutando de una película en Super 8</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/family_watching_film.jpg" alt="Familia moderna viendo proyección de película antigua" loading="lazy">
+                <div class="caption"><strong>👨‍👩‍👧‍👦</strong> — Reviviendo recuerdos en familia</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/Family_watching_old_childhood_footage.jpg" alt="Familia viendo grabaciones de su infancia" loading="lazy">
+                <div class="caption"><strong>📺</strong> — Momentos de infancia revividos en pantalla</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/Family_watching_old_childhood_footage2.jpg" alt="Familia viendo recuerdos de su niñez" loading="lazy">
+                <div class="caption"><strong>❤️</strong> — La alegría de redescubrir el pasado</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/box_vhs.jpg" alt="Caja con cintas VHS antiguas" loading="lazy">
+                <div class="caption"><strong>📼</strong> — Cintas VHS esperando ser digitalizadas</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/man_looking_vhs_tape.jpg" alt="Señor con cinta VHS y palomitas" loading="lazy">
+                <div class="caption"><strong>👴</strong> — Conservando recuerdos de toda una vida</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/old_photos1.jpg" alt="Montón de fotografías antiguas en blanco y negro" loading="lazy">
+                <div class="caption"><strong>🖼️</strong> — Fotografías antiguas esperando ser digitalizadas</div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/old_photos2.jpg" alt="Fotografías antiguas en blanco y negro sobre mesa" loading="lazy">
+                <div class="caption"><strong>📷</strong> — Tesoros familiares que merecen preservarse</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== STEPS SECTION ===== -->
+<section class="steps-section" id="como-funciona">
+    <div class="container">
+        <h2 class="section-title" style="color:white;">¿Cómo funciona?</h2>
+        <p class="section-sub" style="color:rgba(255,255,255,0.8);">Tres pasos sencillos para preservar tus memorias.</p>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Reúne tus recuerdos</h3>
+                <p>Busca tus cajas de fotos, cintas VHS y películas antiguas guardadas en casa.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Envíanoslos</h3>
+                <p>Empaca tus recuerdos de forma segura y envíanoslos por paquetería (tú pagas el envío).</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Recibe tus archivos</h3>
+                <p>Te devolvemos tus originales junto con tus archivos digitales en USB o descarga.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section class="pricing-section" id="precios">
+    <div class="container">
+        <h2 class="section-title">Paquetes para México</h2>
+        <p class="section-sub">Elige el que mejor se adapte a tu colección. Precios en pesos mexicanos (MXN).</p>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Inicio</h3>
+                <div class="price">$799 <span>MXN</span></div>
+                <div class="sub">Hasta 2 artículos</div>
+                <ul>
+                    <li>Digitalización profesional</li>
+                    <li>Archivos MP4 o JPG</li>
+                    <li>Devolución de originales</li>
+                </ul>
+                <button class="btn-pricing" onclick="document.getElementById('cotizar').scrollIntoView({behavior:'smooth'})">Cotizar</button>
+            </div>
+            <div class="pricing-card popular">
+                <div class="badge">Más popular</div>
+                <h3>Recuerdos</h3>
+                <div class="price">$4,999 <span>MXN</span></div>
+                <div class="sub">Hasta 20 artículos</div>
+                <ul>
+                    <li>Digitalización profesional</li>
+                    <li>Archivos MP4 o JPG</li>
+                    <li>Devolución de originales</li>
+                    <li>⭐ Incluye USB de regalo</li>
+                </ul>
+                <button class="btn-pricing" onclick="document.getElementById('cotizar').scrollIntoView({behavior:'smooth'})">Cotizar</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Familiar</h3>
+                <div class="price">$2,999 <span>MXN</span></div>
+                <div class="sub">Hasta 10 artículos</div>
+                <ul>
+                    <li>Digitalización profesional</li>
+                    <li>Archivos MP4 o JPG</li>
+                    <li>Devolución de originales</li>
+                </ul>
+                <button class="btn-pricing" onclick="document.getElementById('cotizar').scrollIntoView({behavior:'smooth'})">Cotizar</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Archivo Familiar</h3>
+                <div class="price">$8,499 <span>MXN</span></div>
+                <div class="sub">Hasta 40 artículos</div>
+                <ul>
+                    <li>Digitalización profesional</li>
+                    <li>Archivos MP4 o JPG</li>
+                    <li>Devolución de originales</li>
+                    <li>Incluye 2 USB</li>
+                </ul>
+                <button class="btn-pricing" onclick="document.getElementById('cotizar').scrollIntoView({behavior:'smooth'})">Cotizar</button>
+            </div>
+        </div>
+        <p style="text-align:center;margin-top:24px;font-size:0.85rem;color:#888;">* El envío de tus recuerdos a nuestro centro de digitalización corre por tu cuenta.</p>
+    </div>
+</section>
+
+<!-- ===== INQUIRY FORM ===== -->
+<section class="inquiry-section" id="cotizar">
+    <div class="container">
+        <h2 class="section-title text-white">📦 Cotiza tu Digitalización</h2>
+        <p class="section-sub text-white">Cuéntanos qué deseas digitalizar y te enviaremos la dirección para que nos mandes tus recuerdos.</p>
+        
+        <form class="inquiry-form" id="inquiryForm">
+            <div class="form-group">
+                <label for="nombre">Nombre completo <span class="required">*</span></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. María González" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Correo electrónico <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono <span class="required">*</span></label>
+                <input type="tel" id="telefono" name="telefono" placeholder="55 1234 5678" required>
+            </div>
+            
+            <div class="form-group">
+                <label>¿Qué deseas digitalizar? <span class="required">*</span></label>
+                <div class="checkbox-grid">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="tipo" value="VHS / VHS-C">
+                        <span>📹 VHS</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="tipo" value="Super 8 / 8mm">
+                        <span>🎬 Super 8</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="tipo" value="Fotografías impresas">
+                        <span>🖼️ Fotos</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="tipo" value="Negativos / Diapositivas">
+                        <span>🎞️ Negativos</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="tipo" value="Cassettes / Audio">
+                        <span>🎵 Audio</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="tipo" value="MiniDV / Hi8">
+                        <span>📹 MiniDV</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="tipo" value="16mm">
+                        <span>🎬 16mm</span>
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="tipo" value="Otro formato">
+                        <span>❓ Otro</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="cantidad">Cantidad aproximada de artículos <span class="required">*</span></label>
+                <select id="cantidad" name="cantidad" required>
+                    <option value="">Selecciona una opción...</option>
+                    <option value="1-5">1 - 5 artículos</option>
+                    <option value="6-10">6 - 10 artículos</option>
+                    <option value="11-20">11 - 20 artículos</option>
+                    <option value="21-40">21 - 40 artículos</option>
+                    <option value="40+">Más de 40 artículos</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mensaje">Mensaje adicional</label>
+                <textarea id="mensaje" name="mensaje" placeholder="¿Tienes alguna pregunta o necesitas ayuda con algún formato en especial?"></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+                <i class="fas fa-paper-plane"></i> Enviar y obtener dirección
+            </button>
+        </form>
+
+        <div class="address-reveal" id="addressReveal">
+            <i class="fas fa-check-circle" style="font-size:3rem;color:#25D366;margin-bottom:12px;"></i>
+            <h3>¡Listo! Aquí tienes la dirección de envío</h3>
+            <p style="opacity:0.8;margin-bottom:6px;">Empaca tus recuerdos de forma segura y envíalos a:</p>
+            <div class="address-box">
+                <strong>RescateDigital</strong><br>
+                Las Ánimas, Puebla<br>
+                Puebla, Puebla, México<br>
+                <span style="font-size:0.9rem;opacity:0.7;">(Te enviaremos los detalles completos por correo)</span>
+            </div>
+            <p style="font-size:0.9rem;opacity:0.7;margin-top:8px;">
+                <i class="fas fa-info-circle"></i> Te contactaremos en las próximas 24 horas para confirmar tu pedido.
+            </p>
+            <a href="https://wa.me/522216498364?text=Hola%20RescateDigital%2C%20ya%20envi%C3%A9%20mi%20solicitud%20de%20cotizaci%C3%B3n" 
+               class="whatsapp-link" target="_blank">
+                <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials-section">
+    <div class="container">
+        <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+        <p class="section-sub">Historias reales de familias que preservaron sus recuerdos.</p>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Volvimos a ver videos de nuestros abuelos que llevaban más de 30 años guardados. Fue una experiencia increíble."</p>
+                <div class="author">— María G., CDMX</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"No sabía que nuestras cintas VHS todavía podían rescatarse. La calidad superó nuestras expectativas."</p>
+                <div class="author">— Carlos R., Guadalajara</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Ahora toda nuestra familia tiene copias digitales de nuestras fotografías antiguas. ¡Gracias!"</p>
+                <div class="author">— Ana P., Monterrey</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq-section" id="faq">
+    <div class="container">
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <p class="section-sub">Resolvemos tus dudas sobre el proceso.</p>
+        <div style="max-width:700px;margin:30px auto 0;">
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Qué formatos digitales recibo?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">Recibes tus archivos en MP4 (para video) y JPG (para fotografías). También ofrecemos opción de entrega en USB.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Cuánto tarda el proceso?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">Generalmente entre 2 y 4 semanas, dependiendo del volumen de tu pedido y la temporada.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Mis originales me serán devueltos?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">¡Sí! Todos tus materiales originales te serán devueltos junto con las versiones digitales.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Es seguro enviar mis recuerdos?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">Tomamos todas las precauciones para proteger tus materiales durante todo el proceso. Recomendamos enviar por paquetería con seguro.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    ¿Qué hago si tengo un formato que no está en la lista?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">¡Contáctanos! Podemos digitalizar casi cualquier formato antiguo. Escríbenos por WhatsApp o llena el formulario de cotización.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta">
+    <div class="container">
+        <h2>Conserva tu historia familiar</h2>
+        <p>Cada fotografía y cada video cuentan una historia que merece ser recordada. No permitas que el tiempo borre tus recuerdos más valiosos.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+            <a href="#cotizar" class="btn-primary" style="background:#f5a623;color:#0a1a2e;font-size:1.2rem;padding:18px 50px;">📦 Digitaliza Tus Recuerdos Hoy</a>
+            <a href="https://wa.me/522216498364" target="_blank" class="btn-primary btn-whatsapp" style="font-size:1.2rem;padding:18px 40px;">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+        <p class="phone-link">
+            <i class="fas fa-phone"></i> Llámanos: <a href="tel:+522216498364">221 649 8364</a>
+        </p>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>📼 RescateDigital</h4>
+                <p style="font-size:0.9rem;">Preservamos tus recuerdos para las futuras generaciones.</p>
+                <div style="margin-top:8px;font-size:0.85rem;opacity:0.7;">
+                    <i class="fas fa-map-marker-alt"></i> Las Ánimas, Puebla
+                </div>
+            </div>
+            <div>
+                <h4>Servicios</h4>
+                <a href="#servicios">Digitalizar VHS</a>
+                <a href="#servicios">Convertir Super 8</a>
+                <a href="#servicios">Escanear fotos</a>
+                <a href="#servicios">Digitalizar audio</a>
+            </div>
+            <div>
+                <h4>Enlaces</h4>
+                <a href="#faq">Preguntas Frecuentes</a>
+                <a href="#cotizar">Cotizar</a>
+                <a href="blog/por-que-digitalizar-tus-vhs.html">Blog</a>
+                <a href="#">Aviso de Privacidad</a>
+                <a href="#">Términos</a>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <a href="mailto:hola@rescatedigital.com.mx">hola@rescatedigital.com.mx</a>
+                <a href="tel:+522216498364"><i class="fas fa-phone"></i> 221 649 8364</a>
+                <a href="https://wa.me/522216498364" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Las Ánimas, Puebla, Puebla, México</span>
+            </div>
+            <p>© 2026 RescateDigital.com.mx — Todos los derechos reservados</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+    // ===== MOBILE MENU =====
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+        });
+    });
+
+    // ===== HEADER SHRINK =====
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('header-shrink');
+        } else {
+            header.classList.remove('header-shrink');
+        }
+    });
+
+    // ===== FAQ ACCORDION =====
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const answer = button.nextElementSibling;
+            const isOpen = answer.classList.contains('open');
+            
+            document.querySelectorAll('.faq-answer').forEach(a => {
+                if (a !== answer) {
+                    a.classList.remove('open');
+                    a.previousElementSibling.querySelector('span').textContent = '+';
+                }
+            });
+            
+            if (isOpen) {
+                answer.classList.remove('open');
+                button.querySelector('span').textContent = '+';
+            } else {
+                answer.classList.add('open');
+                button.querySelector('span').textContent = '−';
+            }
+        });
+    });
+
+    // ===== FORM HANDLER =====
+    document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const telefono = document.getElementById('telefono').value;
+        
+        const checkedTypes = [];
+        document.querySelectorAll('input[name="tipo"]:checked').forEach(cb => {
+            checkedTypes.push(cb.value);
+        });
+        
+        const cantidad = document.getElementById('cantidad').value;
+        const mensaje = document.getElementById('mensaje').value;
+        
+        if (!nombre || !email || !telefono || checkedTypes.length === 0 || !cantidad) {
+            alert('Por favor, llena todos los campos requeridos (*) y selecciona al menos un tipo de medio.');
+            return;
+        }
+        
+        document.getElementById('addressReveal').classList.add('visible');
+        document.getElementById('addressReveal').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    console.log('🚀 RescateDigital.com.mx — ¡Preservando recuerdos en México!');
+    console.log('📍 Las Ánimas, Puebla, Puebla');
+    console.log('📱 WhatsApp: +52 221 649 8364');
+</script>
+
+</body>
+</html>
