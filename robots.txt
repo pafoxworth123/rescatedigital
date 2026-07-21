@@ -1,0 +1,22 @@
+# Robots.txt para RescateDigital.com.mx
+
+User-agent: *
+Allow: /
+
+# Permitir acceso a todos los recursos
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Deshabilitar páginas específicas si es necesario
+# Disallow: /admin/
+# Disallow: /wp-admin/
+
+# Sitemap
+Sitemap: https://rescatedigital.com.mx/sitemap.xml
+
+# Tiempo de rastreo (opcional)
+Crawl-delay: 2
+
+# Especificar el motor de búsqueda principal
+Host: https://rescatedigital.com.mx
