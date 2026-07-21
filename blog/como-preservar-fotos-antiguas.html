@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo preservar fotografías antiguas | RescateDigital</title>
+    <meta name="description" content="Aprende cómo preservar tus fotografías antiguas y evitar que se deterioren. Consejos prácticos para conservar tus recuerdos familiares en México.">
+    <meta name="keywords" content="preservar fotos antiguas, conservar fotografías, fotos viejas, digitalizar fotos, México">
+    <link rel="canonical" href="https://rescatedigital.com.mx/blog/como-preservar-fotos-antiguas">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            color: #1a1a1a;
+            line-height: 1.8;
+            background: #ffffff;
+        }
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 16px 0;
+            transition: all 0.3s ease;
+        }
+        .header-shrink {
+            padding: 10px 0;
+            box-shadow: 0 2px 30px rgba(0,0,0,0.08);
+        }
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #0a3d6b;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo span {
+            color: #e87a2a;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #e87a2a;
+        }
+        .btn-nav {
+            background: #e87a2a;
+            color: white !important;
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .btn-nav:hover {
+            background: #0a3d6b !important;
+            transform: translateY(-2px);
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #0a3d6b;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+        .phone-header {
+            color: #0a3d6b;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .phone-header i {
+            color: #25D366;
+        }
+
+        .blog-post {
+            max-width: 800px;
+            margin: 100px auto 60px;
+            padding: 40px 24px;
+        }
+        .blog-post h1 {
+            font-size: 2.8rem;
+            color: #0a3d6b;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .blog-post .meta {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            border-bottom: 1px solid #e8e4e0;
+            padding-bottom: 16px;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .blog-post .meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .blog-post h2 {
+            color: #0a3d6b;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            font-size: 1.8rem;
+        }
+        .blog-post h3 {
+            color: #0a3d6b;
+            margin-top: 28px;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        .blog-post p {
+            margin-bottom: 18px;
+            line-height: 1.8;
+            color: #333;
+        }
+        .blog-post ul, .blog-post ol {
+            margin: 16px 0 24px 28px;
+            color: #333;
+        }
+        .blog-post ul li, .blog-post ol li {
+            margin-bottom: 10px;
+        }
+        .blog-post .highlight-box {
+            background: #f7f4f0;
+            padding: 24px 30px;
+            border-radius: 16px;
+            border-left: 4px solid #e87a2a;
+            margin: 24px 0;
+        }
+        .blog-post .highlight-box strong {
+            color: #0a3d6b;
+        }
+        .blog-cta {
+            background: #0a1a2e;
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+        }
+        .blog-cta h3 {
+            color: #f5a623;
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+        }
+        .blog-cta p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 16px;
+        }
+        .btn-primary {
+            background: #e87a2a;
+            color: white;
+            border: none;
+            padding: 16px 44px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 20px rgba(232, 122, 42, 0.3);
+        }
+        .btn-primary:hover {
+            background: #d16a1a;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 40px rgba(232, 122, 42, 0.4);
+        }
+
+        footer {
+            background: #0a1a2e;
+            color: rgba(255,255,255,0.7);
+            padding: 60px 0 30px;
+            margin-top: 40px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        .footer-grid h4 {
+            color: white;
+            margin-bottom: 14px;
+            font-size: 1.1rem;
+        }
+        .footer-grid a {
+            display: block;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            padding: 5px 0;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .footer-grid a:hover {
+            color: #f5a623;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        .footer-location {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: white;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                padding: 24px;
+                border-bottom: 2px solid #e8e4e0;
+                gap: 16px;
+                box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            }
+            .nav-links.open {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .phone-header {
+                display: none;
+            }
+            .blog-post h1 {
+                font-size: 2rem;
+            }
+            .blog-post h2 {
+                font-size: 1.5rem;
+            }
+            .blog-post {
+                margin: 80px auto 40px;
+                padding: 20px 16px;
+            }
+        }
+        @media (max-width: 480px) {
+            .blog-post h1 {
+                font-size: 1.6rem;
+            }
+            .blog-post .meta {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header id="header">
+    <div class="container header-flex">
+        <a href="/" class="logo">📼 Rescate<span>Digital</span></a>
+        <div class="phone-header">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+522216498364" style="color:#0a3d6b;text-decoration:none;">221 649 8364</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links" id="navLinks">
+            <a href="/#servicios">Servicios</a>
+            <a href="/#precios">Precios</a>
+            <a href="/#cotizar">Cotizar</a>
+            <a href="/#faq">Preguntas</a>
+            <a href="/#cotizar" class="btn-nav">¡Cotiza Ahora!</a>
+        </nav>
+    </div>
+</header>
+
+<article class="blog-post">
+    <h1>Cómo preservar tus fotografías antiguas</h1>
+    <div class="meta">
+        <span><i class="far fa-calendar"></i> 21 de julio, 2026</span>
+        <span><i class="far fa-clock"></i> 5 min de lectura</span>
+        <span><i class="fas fa-tag"></i> Fotografías, Preservación</span>
+    </div>
+
+    <p>Las fotografías antiguas son tesoros irremplazables que guardan la historia de nuestras familias. Sin embargo, el paso del tiempo, la luz, la humedad y el manejo inadecuado pueden dañarlas irreversiblemente. En esta guía, te enseñamos cómo preservar tus fotografías antiguas para que tus recuerdos duren para siempre.</p>
+
+    <div class="highlight-box">
+        <strong>Dato importante:</strong> Las fotografías impresas en papel pueden durar décadas si se conservan adecuadamente, pero pueden deteriorarse en pocos años si se exponen a condiciones adversas.
+    </div>
+
+    <h2>🖼️ ¿Por qué se deterioran las fotografías antiguas?</h2>
+    <p>Las fotografías están hechas de materiales que reaccionan con el medio ambiente. Los principales factores de deterioro son:</p>
+    <ul>
+        <li><strong>Luz:</strong> La luz solar y la luz artificial pueden decolorar las fotografías, especialmente las más antiguas.</li>
+        <li><strong>Humedad:</strong> El exceso de humedad puede provocar manchas, moho y la adhesión de las fotos entre sí.</li>
+        <li><strong>Temperatura:</strong> El calor acelera el deterioro químico de los materiales fotográficos.</li>
+        <li><strong>Manejo:</strong> El contacto con los dedos puede transferir aceites y ácidos que dañan la superficie.</li>
+        <li><strong>Ácidos:</strong> Los álbumes y cajas de mala calidad pueden contener ácidos que dañan las fotos.</li>
+    </ul>
+
+    <h2>📦 Cómo almacenar tus fotografías correctamente</h2>
+    <p>El almacenamiento adecuado es la clave para preservar tus fotografías:</p>
+
+    <h3>✅ Condiciones ideales</h3>
+    <ul>
+        <li><strong>Temperatura:</strong> Mantén tus fotos en un lugar fresco, entre 15-20°C.</li>
+        <li><strong>Humedad:</strong> La humedad relativa ideal es entre 30-40%.</li>
+        <li><strong>Luz:</strong> Almacena en un lugar oscuro, lejos de la luz directa.</li>
+        <li><strong>Lugar:</strong> Evita sótanos húmedos o áticos calurosos.</li>
+    </ul>
+
+    <h3>✅ Materiales recomendados</h3>
+    <ul>
+        <li><strong>Álbumes sin ácido:</strong> Usa álbumes de archivo con papel libre de ácidos.</li>
+        <li><strong>Fundas protectoras:</strong> Coloca las fotos en fundas de polipropileno o poliéster.</li>
+        <li><strong>Cajas de archivo:</strong> Guarda las fotos en cajas de cartón libre de ácido.</li>
+        <li><strong>Papel intercalado:</strong> Usa papel de seda sin ácido entre las fotos para evitar que se peguen.</li>
+    </ul>
+
+    <h2>✋ Cómo manipular fotografías antiguas</h2>
+    <p>El manejo correcto es esencial para evitar daños:</p>
+    <ul>
+        <li><strong>Lávate las manos:</strong> Siempre lava y seca bien tus manos antes de tocar fotos.</li>
+        <li><strong>Usa guantes:</strong> Si tienes fotos muy valiosas, usa guantes de algodón.</li>
+        <li><strong>Sujeta por los bordes:</strong> Siempre toma las fotos por los bordes, nunca por la superficie.</li>
+        <li><strong>Apoya en una superficie plana:</strong> No dobles ni enrolles las fotos.</li>
+        <li><strong>Evita el contacto con líquidos:</strong> Mantén las fotos alejadas de agua y líquidos.</li>
+    </ul>
+
+    <h2>🔄 ¿Por qué digitalizar tus fotografías?</h2>
+    <p>La digitalización es la mejor manera de preservar tus recuerdos para siempre:</p>
+    <ul>
+        <li><strong>Protección permanente:</strong> Una vez digitalizadas, las fotos no pueden perderse ni dañarse.</li>
+        <li><strong>Acceso fácil:</strong> Puedes verlas desde cualquier dispositivo en cualquier momento.</li>
+        <li><strong>Compartir:</strong> Envía las fotos a familiares en todo el mundo.</li>
+        <li><strong>Restauración:</strong> Las fotos dañadas pueden ser restauradas digitalmente.</li>
+        <li><strong>Ahorro de espacio:</strong> No más cajas y álbumes ocupando espacio.</li>
+    </ul>
+
+    <div class="highlight-box">
+        <strong>¿Sabías que?</strong> Una foto digitalizada correctamente puede durar cientos de años sin deteriorarse, mientras que una foto impresa puede empezar a decolorarse en menos de 20 años.
+    </div>
+
+    <h2>📋 Checklist para preservar tus fotos</h2>
+    <ul>
+        <li>☐ Almacenar en lugar fresco y seco</li>
+        <li>☐ Usar materiales libres de ácido</li>
+        <li>☐ Evitar la luz directa</li>
+        <li>☐ Manipular con manos limpias</li>
+        <li>☐ No usar cinta adhesiva ni pegamento</li>
+        <li>☐ Hacer copias digitales de respaldo</li>
+        <li>☐ Digitalizar las fotos más valiosas</li>
+    </ul>
+
+    <h2>🚫 Qué NO hacer con tus fotografías</h2>
+    <ul>
+        <li><strong>No uses cinta adhesiva:</strong> Puede manchar y rasgar la foto.</li>
+        <li><strong>No uses clips ni grapas:</strong> Dejan marcas permanentes.</li>
+        <li><strong>No las pegues en álbumes:</strong> Los adhesivos pueden dañarlas.</li>
+        <li><strong>No las expongas al sol:</strong> La luz decolora las fotos.</li>
+        <li><strong>No las guardes en el baño:</strong> La humedad es destructiva.</li>
+    </ul>
+
+    <div class="blog-cta">
+        <h3>📷 ¿Listo para preservar tus fotos para siempre?</h3>
+        <p>Digitaliza tus fotografías antiguas y asegura que tus recuerdos duren para siempre. Miles de familias mexicanas ya confían en nosotros.</p>
+        <a href="/#cotizar" class="btn-primary">📦 Cotiza tu digitalización</a>
+    </div>
+</article>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>📼 RescateDigital</h4>
+                <p style="font-size:0.9rem;">Preservamos tus recuerdos para las futuras generaciones.</p>
+                <div style="margin-top:8px;font-size:0.85rem;opacity:0.7;">
+                    <i class="fas fa-map-marker-alt"></i> Las Ánimas, Puebla
+                </div>
+            </div>
+            <div>
+                <h4>Servicios</h4>
+                <a href="/#servicios">Digitalizar VHS</a>
+                <a href="/#servicios">Convertir Super 8</a>
+                <a href="/#servicios">Escanear fotos</a>
+                <a href="/#servicios">Digitalizar audio</a>
+            </div>
+            <div>
+                <h4>Enlaces</h4>
+                <a href="/#faq">Preguntas Frecuentes</a>
+                <a href="/#cotizar">Cotizar</a>
+                <a href="/blog/por-que-digitalizar-tus-vhs">Blog</a>
+                <a href="#">Aviso de Privacidad</a>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <a href="mailto:hola@rescatedigital.com.mx">hola@rescatedigital.com.mx</a>
+                <a href="tel:+522216498364"><i class="fas fa-phone"></i> 221 649 8364</a>
+                <a href="https://wa.me/522216498364" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Las Ánimas, Puebla, Puebla, México</span>
+            </div>
+            <p>© 2026 RescateDigital.com.mx — Todos los derechos reservados</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+        });
+    });
+
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('header-shrink');
+        } else {
+            header.classList.remove('header-shrink');
+        }
+    });
+</script>
+
+</body>
+</html>

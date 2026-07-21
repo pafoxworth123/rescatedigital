@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescatar recuerdos familiares | RescateDigital</title>
+    <meta name="description" content="Descubre cómo rescatar tus recuerdos familiares digitalizando VHS, fotos y películas antiguas. Preserva tu historia para futuras generaciones.">
+    <meta name="keywords" content="rescatar recuerdos, preservar recuerdos familiares, digitalizar memorias, México">
+    <link rel="canonical" href="https://rescatedigital.com.mx/blog/rescatar-recuerdos-familiares">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Same styles as blog post 1 - copy from above */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            color: #1a1a1a;
+            line-height: 1.8;
+            background: #ffffff;
+        }
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 16px 0;
+            transition: all 0.3s ease;
+        }
+        .header-shrink {
+            padding: 10px 0;
+            box-shadow: 0 2px 30px rgba(0,0,0,0.08);
+        }
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #0a3d6b;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo span {
+            color: #e87a2a;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: #e87a2a;
+        }
+        .btn-nav {
+            background: #e87a2a;
+            color: white !important;
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .btn-nav:hover {
+            background: #0a3d6b !important;
+            transform: translateY(-2px);
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #0a3d6b;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+        .phone-header {
+            color: #0a3d6b;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .phone-header i {
+            color: #25D366;
+        }
+
+        .blog-post {
+            max-width: 800px;
+            margin: 100px auto 60px;
+            padding: 40px 24px;
+        }
+        .blog-post h1 {
+            font-size: 2.8rem;
+            color: #0a3d6b;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .blog-post .meta {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            border-bottom: 1px solid #e8e4e0;
+            padding-bottom: 16px;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .blog-post .meta span {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .blog-post h2 {
+            color: #0a3d6b;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            font-size: 1.8rem;
+        }
+        .blog-post h3 {
+            color: #0a3d6b;
+            margin-top: 28px;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        .blog-post p {
+            margin-bottom: 18px;
+            line-height: 1.8;
+            color: #333;
+        }
+        .blog-post ul, .blog-post ol {
+            margin: 16px 0 24px 28px;
+            color: #333;
+        }
+        .blog-post ul li, .blog-post ol li {
+            margin-bottom: 10px;
+        }
+        .blog-post .highlight-box {
+            background: #f7f4f0;
+            padding: 24px 30px;
+            border-radius: 16px;
+            border-left: 4px solid #e87a2a;
+            margin: 24px 0;
+        }
+        .blog-post .highlight-box strong {
+            color: #0a3d6b;
+        }
+        .blog-cta {
+            background: #0a1a2e;
+            padding: 40px 30px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+        }
+        .blog-cta h3 {
+            color: #f5a623;
+            font-size: 1.6rem;
+            margin-bottom: 8px;
+        }
+        .blog-cta p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 16px;
+        }
+        .btn-primary {
+            background: #e87a2a;
+            color: white;
+            border: none;
+            padding: 16px 44px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 20px rgba(232, 122, 42, 0.3);
+        }
+        .btn-primary:hover {
+            background: #d16a1a;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 40px rgba(232, 122, 42, 0.4);
+        }
+
+        footer {
+            background: #0a1a2e;
+            color: rgba(255,255,255,0.7);
+            padding: 60px 0 30px;
+            margin-top: 40px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+        .footer-grid h4 {
+            color: white;
+            margin-bottom: 14px;
+            font-size: 1.1rem;
+        }
+        .footer-grid a {
+            display: block;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            padding: 5px 0;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .footer-grid a:hover {
+            color: #f5a623;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        .footer-location {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: white;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                padding: 24px;
+                border-bottom: 2px solid #e8e4e0;
+                gap: 16px;
+                box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            }
+            .nav-links.open {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .phone-header {
+                display: none;
+            }
+            .blog-post h1 {
+                font-size: 2rem;
+            }
+            .blog-post h2 {
+                font-size: 1.5rem;
+            }
+            .blog-post {
+                margin: 80px auto 40px;
+                padding: 20px 16px;
+            }
+        }
+        @media (max-width: 480px) {
+            .blog-post h1 {
+                font-size: 1.6rem;
+            }
+            .blog-post .meta {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header id="header">
+    <div class="container header-flex">
+        <a href="/" class="logo">📼 Rescate<span>Digital</span></a>
+        <div class="phone-header">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+522216498364" style="color:#0a3d6b;text-decoration:none;">221 649 8364</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links" id="navLinks">
+            <a href="/#servicios">Servicios</a>
+            <a href="/#precios">Precios</a>
+            <a href="/#cotizar">Cotizar</a>
+            <a href="/#faq">Preguntas</a>
+            <a href="/#cotizar" class="btn-nav">¡Cotiza Ahora!</a>
+        </nav>
+    </div>
+</header>
+
+<article class="blog-post">
+    <h1>Rescatar recuerdos familiares: Preserva tu historia para siempre</h1>
+    <div class="meta">
+        <span><i class="far fa-calendar"></i> 21 de julio, 2026</span>
+        <span><i class="far fa-clock"></i> 5 min de lectura</span>
+        <span><i class="fas fa-tag"></i> Recuerdos, Familia</span>
+    </div>
+
+    <p>Los recuerdos familiares son el tesoro más valioso que podemos heredar. Bodas, nacimientos, cumpleaños, vacaciones... Momentos que definen quiénes somos. Pero el tiempo, el deterioro y la tecnología obsoleta ponen en riesgo esos recuerdos. Rescatar recuerdos familiares digitalizándolos es la mejor manera de preservarlos para siempre.</p>
+
+    <div class="highlight-box">
+        <strong>Dato importante:</strong> Según estudios, el 70% de las familias tienen cintas VHS, fotos o películas que no han visto en más de 10 años y que están en riesgo de perderse.
+    </div>
+
+    <h2>📹 ¿Qué recuerdos debes rescatar?</h2>
+    <p>Cada formato guarda una parte de nuestra historia:</p>
+    <ul>
+        <li><strong>VHS y cintas de video:</strong> Bodas, cumpleaños, comuniones, momentos familiares.</li>
+        <li><strong>Super 8 y películas:</strong> La historia en movimiento de varias generaciones.</li>
+        <li><strong>Fotografías antiguas:</strong> Rostros de abuelos, bisabuelos, momentos históricos.</li>
+        <li><strong>Negativos y diapositivas:</strong> Recuerdos que nunca vieron la luz.</li>
+        <li><strong>Cassettes y audio:</strong> Voces de seres queridos que ya no están.</li>
+    </ul>
+
+    <h2>⏰ ¿Por qué rescatar tus recuerdos ahora?</h2>
+    <ul>
+        <li><strong>El tiempo pasa rápido:</strong> Cada año que pasa, los materiales se deterioran más.</li>
+        <li><strong>La tecnología cambia:</strong> Los reproductores de VHS y proyectores son difíciles de encontrar.</li>
+        <li><strong>Las generaciones se van:</strong> Las historias pueden perderse si no se preservan.</li>
+        <li><strong>Los niños crecen:</strong> Las grabaciones de su infancia son un tesoro.</li>
+        <li><strong>Es más barato ahora:</strong> La digitalización es más accesible que nunca.</li>
+    </ul>
+
+    <h2>❤️ El valor emocional de rescatar recuerdos</h2>
+    <p>Digitalizar recuerdos no es solo un proceso técnico. Es una experiencia emocional:</p>
+    <ul>
+        <li><strong>Revivir momentos:</strong> Ver a tus abuelos jóvenes, a tus padres recién casados.</li>
+        <li><strong>Compartir con la familia:</strong> Que todos puedan ver y emocionarse juntos.</li>
+        <li><strong>Crear un legado:</strong> Dejar un tesoro digital para las futuras generaciones.</li>
+        <li><strong>Sanar:</strong> Recuperar memorias de seres queridos que ya no están.</li>
+        <li><strong>Celebrar la vida:</strong> Recordar los momentos felices que nos han formado.</li>
+    </ul>
+
+    <div class="highlight-box">
+        <strong>Testimonio real:</strong> "Cuando vi el video de mi boda de hace 30 años, lloré de emoción. No lo había visto en décadas. Mis hijos nunca lo habían visto. Fue un regalo para toda la familia." — Laura, CDMX
+    </div>
+
+    <h2>📦 El proceso de rescatar tus recuerdos</h2>
+    <p>En RescateDigital, hacemos todo el proceso sencillo y seguro:</p>
+    <ol>
+        <li><strong>Contacta con nosotros:</strong> Cuéntanos qué quieres rescatar.</li>
+        <li><strong>Envía tus materiales:</strong> Te enviamos la dirección para que nos mandes tus recuerdos.</li>
+        <li><strong>Nosotros los digitalizamos:</strong> Con equipos profesionales y cuidado especial.</li>
+        <li><strong>Recibe tus archivos:</strong> En MP4, USB o descarga digital.</li>
+        <li><strong>Disfruta y comparte:</strong> Revive tus recuerdos con toda la familia.</li>
+    </ol>
+
+    <h2>🔄 Beneficios de rescatar tus recuerdos</h2>
+    <ul>
+        <li><strong>Preservación permanente:</strong> Tus recuerdos no se perderán con el tiempo.</li>
+        <li><strong>Acceso fácil:</strong> Puedes verlos en cualquier dispositivo.</li>
+        <li><strong>Compartir:</strong> Envía las fotos y videos a toda la familia.</li>
+        <li><strong>Restauración:</strong> Podemos mejorar la calidad de imágenes y videos.</li>
+        <li><strong>Organización:</strong> Ordena tus recuerdos por fecha, evento o persona.</li>
+        <li><strong>Ahorro de espacio:</strong> No más cajas llenas de fotos y cintas.</li>
+        <li><strong>Legado:</strong> Dejas una herencia digital para tus hijos y nietos.</li>
+    </ul>
+
+    <h2>💡 Consejos para organizar tus recuerdos</h2>
+    <ul>
+        <li><strong>Identifica los eventos:</strong> Etiqueta cada recuerdo por fecha y ocasión.</li>
+        <li><strong>Prioriza lo valioso:</strong> Digitaliza primero los recuerdos más importantes.</li>
+        <li><strong>Organiza por generaciones:</strong> Crea carpetas por abuelos, padres, hijos.</li>
+        <li><strong>Comparte con la familia:</strong> Haz copias para todos los familiares.</li>
+        <li><strong>Haz copias de seguridad:</strong> Guarda tus archivos en más de un lugar.</li>
+    </ul>
+
+    <h2>🌟 Historias de éxito: Recuerdos rescatados</h2>
+    <ul>
+        <li><strong>La boda de los abuelos:</strong> Una cinta VHS de 1965 restaurada y compartida en la boda de los nietos.</li>
+        <li><strong>El primer paso de un niño:</strong> Un video en Super 8 de 1970 convertido a MP4 para el cumpleaños número 50.</li>
+        <li><strong>Fotos de la guerra:</strong> Negativos de la Revolución Mexicana digitalizados para un libro familiar.</li>
+        <li><strong>La voz del abuelo:</strong> Una grabación en cassette de 1980 restaurada y convertida a MP3.</li>
+    </ul>
+
+    <div class="blog-cta">
+        <h3>📼 ¿Tienes recuerdos guardados que merecen ser rescatados?</h3>
+        <p>No esperes más para preservar tu historia familiar. Cada recuerdo cuenta una historia que merece ser recordada.</p>
+        <a href="/#cotizar" class="btn-primary">📦 Rescata tus recuerdos hoy</a>
+    </div>
+</article>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>📼 RescateDigital</h4>
+                <p style="font-size:0.9rem;">Preservamos tus recuerdos para las futuras generaciones.</p>
+                <div style="margin-top:8px;font-size:0.85rem;opacity:0.7;">
+                    <i class="fas fa-map-marker-alt"></i> Las Ánimas, Puebla
+                </div>
+            </div>
+            <div>
+                <h4>Servicios</h4>
+                <a href="/#servicios">Digitalizar VHS</a>
+                <a href="/#servicios">Convertir Super 8</a>
+                <a href="/#servicios">Escanear fotos</a>
+                <a href="/#servicios">Digitalizar audio</a>
+            </div>
+            <div>
+                <h4>Enlaces</h4>
+                <a href="/#faq">Preguntas Frecuentes</a>
+                <a href="/#cotizar">Cotizar</a>
+                <a href="/blog/por-que-digitalizar-tus-vhs">Blog</a>
+                <a href="#">Aviso de Privacidad</a>
+            </div>
+            <div>
+                <h4>Contacto</h4>
+                <a href="mailto:hola@rescatedigital.com.mx">hola@rescatedigital.com.mx</a>
+                <a href="tel:+522216498364"><i class="fas fa-phone"></i> 221 649 8364</a>
+                <a href="https://wa.me/522216498364" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Las Ánimas, Puebla, Puebla, México</span>
+            </div>
+            <p>© 2026 RescateDigital.com.mx — Todos los derechos reservados</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+        });
+    });
+
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('header-shrink');
+        } else {
+            header.classList.remove('header-shrink');
+        }
+    });
+</script>
+
+</body>
+</html>
