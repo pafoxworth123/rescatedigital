@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transferir VHS a USB en México | RescateDigital</title>
-    <meta name="description" content="Transferimos tus cintas VHS a USB. Servicio profesional en México. Preserva tus recuerdos familiares.">
+    <meta name="description" content="Transferimos, digitalizamos, convertimos y pasamos tus cintas VHS a USB. Servicio profesional en México.">
     <meta name="keywords" content="transferir VHS a USB, pasar VHS a USB, convertir VHS a USB, digitalizar VHS, México">
     <link rel="canonical" href="https://rescatedigital.com.mx/transferir-vhs-a-usb">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* ===== COPY ALL CSS FROM YOUR INDEX.HTML HERE ===== */
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
@@ -28,6 +28,7 @@
             padding: 0 24px;
         }
 
+        /* ===== WHATSAPP FLOATING BUTTON ===== */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -73,6 +74,7 @@
             100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
         }
 
+        /* ===== HEADER ===== */
         header {
             position: fixed;
             top: 0;
@@ -160,6 +162,7 @@
             color: #25D366;
         }
 
+        /* ===== HERO ===== */
         .hero {
             position: relative;
             min-height: 100vh;
@@ -300,6 +303,41 @@
             gap: 8px;
         }
 
+        /* ===== HERO COLLAGE ===== */
+        .hero-collage {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 320px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            z-index: 2;
+        }
+        .hero-collage img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            border: 3px solid rgba(255,255,255,0.15);
+            transition: transform 0.3s;
+        }
+        .hero-collage img:hover {
+            transform: scale(1.03);
+        }
+        .hero-collage .span-2 {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-collage {
+                display: none;
+            }
+        }
+
+        /* ===== RISK SECTION ===== */
         .risk-section {
             padding: 80px 0;
             background: #f7f4f0;
@@ -331,6 +369,7 @@
             margin-bottom: 6px;
         }
 
+        /* ===== MEDIA SECTION ===== */
         .media-section {
             padding: 80px 0;
             background: white;
@@ -364,6 +403,7 @@
             font-size: 0.85rem;
         }
 
+        /* ===== GALLERY ===== */
         .gallery-section {
             padding: 80px 0;
             background: #f7f4f0;
@@ -402,6 +442,7 @@
             color: #0a3d6b;
         }
 
+        /* ===== STEPS SECTION ===== */
         .steps-section {
             padding: 100px 0;
             background: url('images/faded_wood_bg1.jpg') center/cover no-repeat fixed;
@@ -465,6 +506,7 @@
             font-size: 0.95rem;
         }
 
+        /* ===== PRICING ===== */
         .pricing-section {
             padding: 80px 0;
             background: white;
@@ -556,6 +598,7 @@
             box-shadow: 0 4px 20px rgba(232, 122, 42, 0.3);
         }
 
+        /* ===== INQUIRY FORM ===== */
         .inquiry-section {
             padding: 80px 0;
             background: linear-gradient(135deg, #0a1a2e 0%, #1a3a5a 100%);
@@ -678,6 +721,7 @@
             box-shadow: 0 8px 40px rgba(232, 122, 42, 0.4);
         }
 
+        /* ===== ADDRESS REVEAL ===== */
         .address-reveal {
             display: none;
             margin-top: 30px;
@@ -725,6 +769,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* ===== TESTIMONIALS ===== */
         .testimonials-section {
             padding: 80px 0;
             background: #f7f4f0;
@@ -760,6 +805,7 @@
             color: #0a3d6b;
         }
 
+        /* ===== FAQ ===== */
         .faq-section {
             padding: 80px 0;
             background: white;
@@ -798,6 +844,7 @@
             padding: 12px 4px 4px;
         }
 
+        /* ===== FINAL CTA ===== */
         .final-cta {
             padding: 100px 0;
             background: url('images/faded_wood_bg2.jpg') center/cover no-repeat fixed;
@@ -850,6 +897,7 @@
             text-decoration: none;
         }
 
+        /* ===== FOOTER ===== */
         footer {
             background: #0a1a2e;
             color: rgba(255,255,255,0.7);
@@ -892,6 +940,7 @@
             font-size: 0.9rem;
         }
 
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -979,6 +1028,7 @@
             }
         }
 
+        /* ===== UTILITY ===== */
         .section-title {
             text-align: center;
             font-size: 2.6rem;
@@ -1036,8 +1086,8 @@
     <div class="hero-bg"></div>
     <div class="container hero-content">
         <div class="hero-badge">💾 Transferimos tus VHS</div>
-        <h1>Transferimos tus <span>cintas VHS a USB</span> en México</h1>
-        <p>Transferimos, digitalizamos, convertimos y pasamos tus cintas VHS a USB y formatos digitales modernos. Preserva tus recuerdos familiares antes de que se deterioren. Servicio profesional en Puebla y todo México.</p>
+        <h1>Transferimos tus <span>cintas VHS a USB</span> en México
+        <p>Transferimos, digitalizamos, convertimos y pasamos tus cintas VHS a USB y formatos digitales modernos</p>
         <div class="hero-stats">
             <div>
                 <span class="number">1,200+</span>
@@ -1063,6 +1113,13 @@
         <div class="hero-location">
             <i class="fas fa-map-marker-alt"></i>
             <span>Las Ánimas, Puebla, Puebla, México</span>
+        </div>
+
+        <!-- ===== HERO COLLAGE ===== -->
+        <div class="hero-collage">
+            <img src="images/box_vhs.jpg" alt="Cintas VHS antiguas">
+            <img src="images/8mm-reel.jpg" alt="Carrete de 8mm">
+            <img src="images/old_photos1.jpg" alt="Fotografías antiguas" class="span-2">
         </div>
     </div>
 </section>
@@ -1135,7 +1192,6 @@
         <h2 class="section-title">Historias que hemos preservado</h2>
         <p class="section-sub">Cada imagen cuenta una historia que merece ser recordada.</p>
         <div class="gallery-grid">
-            <!-- Row 1: 3 images -->
             <div class="gallery-item">
                 <img src="images/60s_family_reel_film.jpg" alt="Familia de los 60s viendo película en Super 8" loading="lazy">
                 <div class="caption"><strong>🎞️ Década de 1960</strong> — Familia disfrutando de una película en Super 8</div>
@@ -1148,8 +1204,6 @@
                 <img src="images/Family_watching_old_childhood_footage.jpg" alt="Familia viendo grabaciones de su infancia" loading="lazy">
                 <div class="caption"><strong>📺</strong> — Momentos de infancia revividos en pantalla</div>
             </div>
-
-            <!-- Row 2: 3 images -->
             <div class="gallery-item">
                 <img src="images/Family_watching_old_childhood_footage2.jpg" alt="Familia viendo recuerdos de su niñez" loading="lazy">
                 <div class="caption"><strong>❤️</strong> — La alegría de redescubrir el pasado</div>
@@ -1162,8 +1216,6 @@
                 <img src="images/8mm-reel.jpg" alt="Carrete de película 8mm antiguo" loading="lazy">
                 <div class="caption"><strong>🎬</strong> — Carretes de 8mm y Super 8 listos para digitalizar</div>
             </div>
-
-            <!-- Row 3: 3 images -->
             <div class="gallery-item">
                 <img src="images/man_looking_vhs_tape.jpg" alt="Señor con cinta VHS y palomitas" loading="lazy">
                 <div class="caption"><strong>👴</strong> — Conservando recuerdos de toda una vida</div>
@@ -1462,9 +1514,9 @@
             </div>
             <div>
                 <h4>Enlaces</h4>
-                <a href="/#faq">Preguntas Frecuentes</a>
-                <a href="/#cotizar">Cotizar</a>
-                <a href="/blog/por-que-digitalizar-tus-vhs">Blog</a>
+                <a href="#faq">Preguntas Frecuentes</a>
+                <a href="#cotizar">Cotizar</a>
+                <a href="blog/por-que-digitalizar-tus-vhs.html">Blog</a>
                 <a href="#">Aviso de Privacidad</a>
             </div>
             <div>

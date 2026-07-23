@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RescateDigital - Convierte VHS, Super 8 y Fotos Antiguas a Digital en México</title>
-    <meta name="description" content="Convierte tus cintas VHS, películas Super 8, fotos y negativos antiguos a formatos digitales. Servicio profesional en México. Preserva tus recuerdos familiares.">
-    <meta name="keywords" content="convertir VHS a digital, digitalizar fotos antiguas, convertir Super 8 a MP4, escanear negativos, digitalizar cintas de cassette, rescatar recuerdos, México, Puebla">
+    <meta name="description" content="Digitalizamos, convertimos, transferimos y pasamos tus cintas VHS, películas Super 8, fotos y negativos antiguos a formatos digitales. Servicio profesional en México. Preserva tus recuerdos familiares.">
+    <meta name="keywords" content="digitalizar VHS, convertir VHS a digital, transferir VHS a USB, pasar VHS a digital, digitalizar fotos antiguas, convertir Super 8 a MP4, escanear negativos, México, Puebla">
     <link rel="canonical" href="https://rescatedigital.com.mx/">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     
@@ -169,7 +169,7 @@
             color: #25D366;
         }
 
-        /* ===== HERO WITH WOOD BACKGROUND ===== */
+        /* ===== HERO ===== */
         .hero {
             position: relative;
             min-height: 100vh;
@@ -183,7 +183,7 @@
         .hero-bg {
             position: absolute;
             inset: 0;
-            background-image: url('images/wood_banner_bg.jpg');
+            background-image: url('images/wood_banner-bg.jpg');
             background-size: cover;
             background-position: center;
             transform: scale(1.05);
@@ -310,6 +310,40 @@
             gap: 8px;
         }
 
+        /* ===== HERO COLLAGE ===== */
+        .hero-collage {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 320px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            z-index: 2;
+        }
+        .hero-collage img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            border: 3px solid rgba(255,255,255,0.15);
+            transition: transform 0.3s;
+        }
+        .hero-collage img:hover {
+            transform: scale(1.03);
+        }
+        .hero-collage .span-2 {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-collage {
+                display: none;
+            }
+        }
+
         /* ===== RISK SECTION ===== */
         .risk-section {
             padding: 80px 0;
@@ -415,7 +449,7 @@
             color: #0a3d6b;
         }
 
-        /* ===== STEPS SECTION WITH WOOD BACKGROUND ===== */
+        /* ===== STEPS SECTION ===== */
         .steps-section {
             padding: 100px 0;
             background: url('images/faded_wood_bg1.jpg') center/cover no-repeat fixed;
@@ -817,7 +851,7 @@
             padding: 12px 4px 4px;
         }
 
-        /* ===== FINAL CTA WITH WOOD BACKGROUND ===== */
+        /* ===== FINAL CTA ===== */
         .final-cta {
             padding: 100px 0;
             background: url('images/faded_wood_bg2.jpg') center/cover no-repeat fixed;
@@ -1086,6 +1120,13 @@
         <div class="hero-location">
             <i class="fas fa-map-marker-alt"></i>
             <span>Las Ánimas, Puebla, Puebla, México</span>
+        </div>
+
+        <!-- ===== HERO COLLAGE ===== -->
+        <div class="hero-collage">
+            <img src="images/box_vhs.jpg" alt="Cintas VHS antiguas">
+            <img src="images/8mm-reel.jpg" alt="Carrete de 8mm">
+            <img src="images/old_photos1.jpg" alt="Fotografías antiguas" class="span-2">
         </div>
     </div>
 </section>
@@ -1478,18 +1519,18 @@
         <div class="footer-grid">
             <div>
                 <h4>📼 RescateDigital</h4>
-                <p style="font-size:0.9rem;">Preservamos tus recuerdos para las futuras generaciones.</p>
+                <p style="font-size:0.9rem;">Digitalizamos, convertimos y transferimos tus recuerdos para las futuras generaciones.</p>
                 <div style="margin-top:8px;font-size:0.85rem;opacity:0.7;">
                     <i class="fas fa-map-marker-alt"></i> Las Ánimas, Puebla
                 </div>
             </div>
             <div>
-				<h4>Servicios</h4>
-				<a href="/digitalizar-vhs">Digitalizar VHS</a>
-				<a href="/convertir-vhs-a-digital">Convertir VHS</a>
-				<a href="/digitalizar-fotos-antiguas">Digitalizar fotos</a>
-				<a href="/digitalizar-super8">Digitalizar Super 8</a>
-			</div>
+                <h4>Servicios</h4>
+                <a href="/digitalizar-vhs">Digitalizar VHS</a>
+                <a href="/convertir-vhs-a-digital">Convertir VHS</a>
+                <a href="/digitalizar-fotos-antiguas">Digitalizar fotos</a>
+                <a href="/digitalizar-super8">Digitalizar Super 8</a>
+            </div>
             <div>
                 <h4>Enlaces</h4>
                 <a href="#faq">Preguntas Frecuentes</a>
@@ -1600,7 +1641,7 @@
         });
     });
 
-    console.log('🚀 RescateDigital.com.mx — ¡Preservando recuerdos en México!');
+    console.log('🚀 RescateDigital.com.mx — ¡Digitalizamos tus recuerdos en México!');
     console.log('📍 Las Ánimas, Puebla, Puebla');
     console.log('📱 WhatsApp: +52 221 649 8364');
 </script>
