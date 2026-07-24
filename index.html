@@ -198,7 +198,7 @@
             position: relative;
             z-index: 2;
             max-width: 700px;
-            padding: 60px 40px 60px 0;
+            padding: 60px 40px 60px 0;  /* ← ADD RIGHT PADDING */
         }
         .hero-badge {
             display: inline-block;
@@ -313,14 +313,14 @@
         /* ===== HERO COLLAGE ===== */
         .hero-collage {
             position: absolute;
-            left: -350px;
-            top: 40%;
-            transform: translateY(-50%);
-            width: 320px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            z-index: 2;
+			Left: -350px;  /* ← CHANGE THIS */
+			top: 40%;
+			transform: translateY(-50%);
+			width: 320px;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 12px;
+			z-index: 2;
         }
         .hero-collage img {
             width: 100%;
@@ -449,89 +449,36 @@
             color: #0a3d6b;
         }
 
-        /* ===== 4-STEP PROCESS (NEW) ===== */
-        .process-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #0a1a2e 0%, #1a3a5a 100%);
-            color: white;
-        }
-        .process-section .section-title {
-            color: white;
-        }
-        .process-section .section-sub {
-            color: rgba(255,255,255,0.7);
-        }
-        .process-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .process-card {
-            text-align: center;
-            background: rgba(255,255,255,0.08);
-            padding: 32px 24px;
-            border-radius: 16px;
-            backdrop-filter: blur(4px);
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: all 0.3s;
-        }
-        .process-card:hover {
-            background: rgba(255,255,255,0.15);
-            transform: translateY(-4px);
-        }
-        .process-card .step-number {
-            width: 68px;
-            height: 68px;
-            background: #e87a2a;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-weight: 800;
-            margin: 0 auto 16px;
-        }
-        .process-card h3 {
-            margin-bottom: 8px;
-            color: #f5a623;
-            font-size: 1.3rem;
-        }
-        .process-card p {
-            opacity: 0.85;
-            font-size: 0.95rem;
-        }
-
-        /* ===== STEPS SECTION (ORIGINAL - renamed to avoid conflict) ===== */
-        .steps-section-original {
+        /* ===== STEPS SECTION ===== */
+        .steps-section {
             padding: 100px 0;
             background: url('images/faded_wood_bg1.jpg') center/cover no-repeat fixed;
             color: white;
             position: relative;
         }
-        .steps-section-original::before {
+        .steps-section::before {
             content: '';
             position: absolute;
             inset: 0;
             background: rgba(10, 26, 46, 0.7);
         }
-        .steps-section-original .container {
+        .steps-section .container {
             position: relative;
             z-index: 2;
         }
-        .steps-section-original .section-title {
+        .steps-section .section-title {
             color: white;
         }
-        .steps-section-original .section-sub {
+        .steps-section .section-sub {
             color: rgba(255,255,255,0.8);
         }
-        .steps-grid-original {
+        .steps-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 40px;
             margin-top: 40px;
         }
-        .step-card-original {
+        .step-card {
             text-align: center;
             background: rgba(255,255,255,0.08);
             padding: 32px 24px;
@@ -540,11 +487,11 @@
             border: 1px solid rgba(255,255,255,0.1);
             transition: all 0.3s;
         }
-        .step-card-original:hover {
+        .step-card:hover {
             background: rgba(255,255,255,0.15);
             transform: translateY(-4px);
         }
-        .step-number-original {
+        .step-number {
             width: 68px;
             height: 68px;
             background: #e87a2a;
@@ -556,17 +503,17 @@
             font-weight: 800;
             margin: 0 auto 16px;
         }
-        .step-card-original h3 {
+        .step-card h3 {
             margin-bottom: 8px;
             color: #f5a623;
             font-size: 1.3rem;
         }
-        .step-card-original p {
+        .step-card p {
             opacity: 0.85;
             font-size: 0.95rem;
         }
 
-        /* ===== PRICING (UPDATED - DOUBLED PRICES) ===== */
+        /* ===== PRICING ===== */
         .pricing-section {
             padding: 80px 0;
             background: white;
@@ -1063,7 +1010,7 @@
             .gallery-grid {
                 grid-template-columns: 1fr 1fr;
             }
-            .steps-section-original {
+            .steps-section {
                 background-attachment: scroll;
             }
             .final-cta {
@@ -1108,6 +1055,14 @@
         .mt-40 { margin-top: 40px; }
         .text-white { color: white; }
     </style>
+	    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B8Q7ZZDRH0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-B8Q7ZZDRH0');
+    </script>
 </head>
 <body>
 
@@ -1175,7 +1130,7 @@
             <span>Las Ánimas, Puebla, Puebla, México</span>
         </div>
 
-        <!-- ===== HERO COLLAGE (9 IMAGES) ===== -->
+        <!-- ===== HERO COLLAGE ===== -->
         <div class="hero-collage">
             <img src="images/box_vhs.jpg" alt="Cintas VHS antiguas">
             <img src="images/8mm-reel.jpg" alt="Carrete de 8mm">
@@ -1297,54 +1252,24 @@
     </div>
 </section>
 
-<!-- ===== 4-STEP PROCESS (NEW - STYLISH) ===== -->
-<section class="process-section" id="proceso">
-    <div class="container">
-        <h2 class="section-title" style="color:white;">📋 Proceso Simple en 4 Pasos</h2>
-        <p class="section-sub" style="color:rgba(255,255,255,0.8);">De tus recuerdos a formato digital en cuatro pasos sencillos.</p>
-        <div class="process-grid">
-            <div class="process-card">
-                <div class="step-number">1</div>
-                <h3>Contáctanos</h3>
-                <p>WhatsApp o correo para cotización personalizada. Te respondemos en menos de 24 horas.</p>
-            </div>
-            <div class="process-card">
-                <div class="step-number">2</div>
-                <h3>Entrega Material</h3>
-                <p>Lleva o manda tu material vía paquetería de forma segura. Nosotros te guiamos.</p>
-            </div>
-            <div class="process-card">
-                <div class="step-number">3</div>
-                <h3>Digitalizamos</h3>
-                <p>Procesamos tu material con cuidado profesional y la más alta calidad.</p>
-            </div>
-            <div class="process-card">
-                <div class="step-number">4</div>
-                <h3>Recibe Digital</h3>
-                <p>Te entregamos en USB y/o nube, junto con tus originales intactos.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== ORIGINAL STEPS SECTION (renamed) ===== -->
-<section class="steps-section-original" id="como-funciona">
+<!-- ===== STEPS SECTION ===== -->
+<section class="steps-section" id="como-funciona">
     <div class="container">
         <h2 class="section-title" style="color:white;">¿Cómo funciona?</h2>
         <p class="section-sub" style="color:rgba(255,255,255,0.8);">Tres pasos sencillos para preservar tus memorias.</p>
-        <div class="steps-grid-original">
-            <div class="step-card-original">
-                <div class="step-number-original">1</div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
                 <h3>Reúne tus recuerdos</h3>
                 <p>Busca tus cajas de fotos, cintas VHS y películas antiguas guardadas en casa.</p>
             </div>
-            <div class="step-card-original">
-                <div class="step-number-original">2</div>
+            <div class="step-card">
+                <div class="step-number">2</div>
                 <h3>Envíanoslos</h3>
                 <p>Empaca tus recuerdos de forma segura y envíanoslos por paquetería (tú pagas el envío).</p>
             </div>
-            <div class="step-card-original">
-                <div class="step-number-original">3</div>
+            <div class="step-card">
+                <div class="step-number">3</div>
                 <h3>Recibe tus archivos</h3>
                 <p>Te devolvemos tus originales junto con tus archivos digitales en USB o descarga.</p>
             </div>
@@ -1352,88 +1277,56 @@
     </div>
 </section>
 
-<!-- ===== PRICING (UPDATED - DOUBLED PRICES, NO PACKAGES) ===== -->
+<!-- ===== PRICING ===== -->
 <section class="pricing-section" id="precios">
     <div class="container">
-        <h2 class="section-title">Precios por Servicio</h2>
-        <p class="section-sub">Elige el servicio que necesitas. Precios en pesos mexicanos (MXN).</p>
+        <h2 class="section-title">Paquetes para México</h2>
+        <p class="section-sub">Elige el que mejor se adapte a tu colección. Precios en pesos mexicanos (MXN).</p>
         <div class="pricing-grid">
-            <!-- Digitalización de Fotos -->
-            <div class="pricing-card popular">
-                <div class="badge">Más popular</div>
-                <h3>Digitalización de Fotos</h3>
-                <div class="price">$16.00 <span>MXN</span></div>
-                <div class="sub">Por foto</div>
-                <ul>
-                    <li>Alta resolución</li>
-                    <li>Restauración básica</li>
-                    <li>Formato JPG</li>
-                </ul>
-                <button class="btn-pricing" onclick="document.getElementById('cotizar').scrollIntoView({behavior:'smooth'})">Cotizar</button>
-            </div>
-
-            <!-- Diapositiva / Negativo -->
             <div class="pricing-card">
-                <h3>Diapositiva o Negativo</h3>
-                <div class="price">$20.00 <span>MXN</span></div>
-                <div class="sub">Por diapositiva/negativo</div>
-                <ul>
-                    <li>Escaneo profesional</li>
-                    <li>Alta resolución</li>
-                    <li>Formato JPG</li>
-                </ul>
-                <button class="btn-pricing" onclick="document.getElementById('cotizar').scrollIntoView({behavior:'smooth'})">Cotizar</button>
-            </div>
-
-            <!-- Audio Cassette -->
-            <div class="pricing-card">
-                <h3>Audio Cassettes</h3>
-                <div class="price">$160.00 <span>MXN</span></div>
-                <div class="sub">Por cassette</div>
-                <ul>
-                    <li>Conversión a MP3</li>
-                    <li>Alta calidad</li>
-                    <li>Audio digital</li>
-                </ul>
-                <button class="btn-pricing" onclick="document.getElementById('cotizar').scrollIntoView({behavior:'smooth'})">Cotizar</button>
-            </div>
-
-            <!-- VHS / Video -->
-            <div class="pricing-card popular">
-                <div class="badge">Más popular</div>
-                <h3>VHS · Hi8 · Betamax · Mini DV</h3>
-                <div class="price">$500.00 <span>MXN</span></div>
-                <div class="sub">Por cinta</div>
+                <h3>Inicio</h3>
+                <div class="price">$799 <span>MXN</span></div>
+                <div class="sub">Hasta 2 artículos</div>
                 <ul>
                     <li>Digitalización profesional</li>
-                    <li>Formato MP4</li>
-                    <li>Preservación total</li>
+                    <li>Archivos MP4 o JPG</li>
+                    <li>Devolución de originales</li>
                 </ul>
                 <button class="btn-pricing" onclick="document.getElementById('cotizar').scrollIntoView({behavior:'smooth'})">Cotizar</button>
             </div>
-
-            <!-- Documentos Importantes -->
-            <div class="pricing-card">
-                <h3>Documentos Importantes</h3>
-                <div class="price">$40.00 <span>MXN</span></div>
-                <div class="sub">Por documento</div>
+            <div class="pricing-card popular">
+                <div class="badge">Más popular</div>
+                <h3>Recuerdos</h3>
+                <div class="price">$4,999 <span>MXN</span></div>
+                <div class="sub">Hasta 20 artículos</div>
                 <ul>
-                    <li>Actas, certificados</li>
-                    <li>Máxima calidad</li>
-                    <li>Seguridad garantizada</li>
+                    <li>Digitalización profesional</li>
+                    <li>Archivos MP4 o JPG</li>
+                    <li>Devolución de originales</li>
+                    <li>⭐ Incluye USB de regalo</li>
                 </ul>
                 <button class="btn-pricing" onclick="document.getElementById('cotizar').scrollIntoView({behavior:'smooth'})">Cotizar</button>
             </div>
-
-            <!-- Restauración de Fotos -->
             <div class="pricing-card">
-                <h3>Restauración de Fotos</h3>
-                <div class="price">$300.00 <span>MXN</span></div>
-                <div class="sub">Por foto</div>
+                <h3>Familiar</h3>
+                <div class="price">$2,999 <span>MXN</span></div>
+                <div class="sub">Hasta 10 artículos</div>
                 <ul>
-                    <li>Reparación de daños</li>
-                    <li>Recuperación de color</li>
-                    <li>Nueva vida digital</li>
+                    <li>Digitalización profesional</li>
+                    <li>Archivos MP4 o JPG</li>
+                    <li>Devolución de originales</li>
+                </ul>
+                <button class="btn-pricing" onclick="document.getElementById('cotizar').scrollIntoView({behavior:'smooth'})">Cotizar</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Archivo Familiar</h3>
+                <div class="price">$8,499 <span>MXN</span></div>
+                <div class="sub">Hasta 40 artículos</div>
+                <ul>
+                    <li>Digitalización profesional</li>
+                    <li>Archivos MP4 o JPG</li>
+                    <li>Devolución de originales</li>
+                    <li>Incluye 2 USB</li>
                 </ul>
                 <button class="btn-pricing" onclick="document.getElementById('cotizar').scrollIntoView({behavior:'smooth'})">Cotizar</button>
             </div>
